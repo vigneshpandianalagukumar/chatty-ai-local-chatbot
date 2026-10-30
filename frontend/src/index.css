@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+/*
+=================================
+GLOBAL UI VARIABLES
+=================================
+*/
+
+:root {
+
+  /* Chat Text */
+
+  --chat-font-size: 16px;
+
+  --chat-line-height: 1.8;
+
+  /* Chat Width */
+
+  --chat-width: 950px;
+
+  /* Input Font */
+
+  --input-font-size: 16px;
+
+  /* Future */
+
+  --sidebar-width: 260px;
+
+}
+
+/*
+=================================
+BASE
+=================================
+*/
+
+html,
+body,
+#root {
+
+  width: 100%;
+
+  height: 100%;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+body {
+
+  background: #212121;
+
+  overflow: hidden;
+
+  font-family:
+    Inter,
+    system-ui,
+    sans-serif;
+
+  color: white;
+
+}
+
+/*
+=================================
+SCROLLBAR
+=================================
+*/
+
+::-webkit-scrollbar {
+
+  width: 8px;
+
+}
+
+::-webkit-scrollbar-track {
+
+  background: transparent;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+  background: #3a3a3a;
+
+  border-radius: 999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+  background: #4a4a4a;
+
+}
+
+/*
+=================================
+SELECTION
+=================================
+*/
+
+::selection {
+
+  background: #7c3aed;
+
+  color: white;
+
+}
+
+/*
+=================================
+UTILITY CLASSES
+=================================
+*/
+
+.chat-width {
+
+  max-width: var(--chat-width);
+
+}
+
+.chat-text {
+
+  font-size:
+    var(--chat-font-size);
+
+  line-height:
+    var(--chat-line-height);
+
+}
+
+.input-text {
+
+  font-size:
+    var(--input-font-size);
+
+}
+
+/* DARK */
+
+[data-theme="dark"] {
+
+  --bg-primary: #212121;
+  --bg-sidebar: #171717;
+  --bg-card: #2b2b2b;
+
+  --text-primary: #ffffff;
+  --bg-selected: #262626;
+  --bg-hover: #202020;
+
+}
+
+/* LIGHT */
+
+[data-theme="light"] {
+
+  --bg-primary: #f7f7f8;
+  --bg-sidebar: #ececf1;
+  --bg-card: #ffffff;
+
+  --text-primary: #1f1f1f;
+  --text-secondary: #6b7280;
+  --border-color: #d9d9de;
+  --bg-selected: #e5e5ea;
+  --bg-hover: #f0f0f5;
+
+}

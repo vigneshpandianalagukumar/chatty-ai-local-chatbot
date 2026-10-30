@@ -1,0 +1,13 @@
+{
+  "name": "chatty-ai-local-chatbot",
+  "private": true,
+  "description": "Local-first AI chat app with document RAG, powered by llama.cpp",
+  "scripts": {
+    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
+    "llama": "bash scripts/start-llama.sh",
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm --prefix backend start\" \"npm --prefix frontend run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
