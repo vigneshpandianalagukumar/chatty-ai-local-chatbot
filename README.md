@@ -6,6 +6,10 @@ It is built on **llama.cpp**, the open-source engine that runs AI models on ordi
 
 > **In one line:** llama.cpp and Ollama *run* a model. Chatty turns that model into a private assistant that can read, search and cite your own documents.
 
+<p align="center">
+  <img src="docs/images/architecture.jpg" alt="Chatty end-to-end architecture: React chat interface, Express API with RAG pipeline and speech-to-text, and two local llama.cpp servers for chat and embeddings" width="100%">
+</p>
+
 ---
 
 ## Table of contents
@@ -112,6 +116,8 @@ An earlier version of this project used Ollama. It was moved to **llama.cpp dire
 ## How it works
 
 ### Architecture
+
+The diagram at the top of this page shows the full system. The same structure as plain text:
 
 ```
 ┌──────────────────── FRONTEND (React + Vite, :5173) ────────────────────┐
